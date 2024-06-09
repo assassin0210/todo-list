@@ -134,6 +134,6 @@ export const TodoProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useTodo = () => {
+export const useTodo = (): IContextType => {
   return useContext(TodoContext);
 };

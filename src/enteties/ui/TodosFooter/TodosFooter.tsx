@@ -2,7 +2,7 @@ import { Button } from "antd";
 import styles from "./TodosFooter.module.scss";
 import { useTodo } from "../../../shared/todosContext/TodosContext";
 export const TodosFooter = () => {
-  const { type, changeType, todos, clearComplete, filteredTodos } = useTodo();
+  const { type, changeType, todos, clearComplete } = useTodo();
 
   const emptyTodos = todos.length === 0;
   return (
@@ -10,6 +10,7 @@ export const TodosFooter = () => {
       <p className={styles.leftItems}>{todos.length} items left</p>
       <div>
         <Button
+          data-testid="all"
           size="small"
           disabled={emptyTodos}
           onClick={() => changeType(null)}
@@ -19,6 +20,7 @@ export const TodosFooter = () => {
         </Button>
         <Button
           size="small"
+          data-testid="active"
           disabled={emptyTodos}
           onClick={() => changeType("active")}
           type={type === "active" ? "primary" : "text"}
@@ -27,6 +29,7 @@ export const TodosFooter = () => {
         </Button>
         <Button
           size="small"
+          data-testid="completed"
           disabled={emptyTodos}
           onClick={() => changeType("completed")}
           type={type === "completed" ? "primary" : "text"}
