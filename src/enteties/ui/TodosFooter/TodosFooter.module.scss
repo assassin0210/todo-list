@@ -1,0 +1,17 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, auto) 1fr;
+  gap: 6px;
+  align-items: center;
+  button {
+    font-size: 14px;
+  }
+  padding: 4px 12px;
+  p {
+    margin: 0;
+  }
+}
+
+.leftItems {
+  font-size: 12px;
+}

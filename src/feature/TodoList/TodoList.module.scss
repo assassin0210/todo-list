@@ -1,0 +1,18 @@
+.root {
+  max-width: 500px;
+  background: white;
+  height: fit-content;
+  max-height: 600px;
+  overflow: auto;
+  width: 100%;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
