@@ -4,7 +4,7 @@ import { TodosHeader } from "./TodosHeader";
 import {
   TodoProvider,
   useTodo,
-} from "../../../shared/todosContext/TodosContext";
+} from "../../../../entities/todosContext/TodosContext";
 import "@testing-library/jest-dom/extend-expect";
 
 jest.mock("../../../shared/todosContext/TodosContext", () => ({

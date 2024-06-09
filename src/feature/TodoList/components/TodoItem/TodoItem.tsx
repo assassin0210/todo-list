@@ -1,6 +1,6 @@
 import { Radio } from "antd";
 import styles from "./TodoItem.module.scss";
-import { ITodo } from "../../../types";
+import { ITodo } from "../../../../shared/types";
 import { memo } from "react";
 import classNames from "classnames";
 

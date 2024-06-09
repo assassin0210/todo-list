@@ -5,8 +5,8 @@ import React, {
   ReactNode,
   useMemo,
 } from "react";
-import { ITodo, TTodoType } from "../../types";
-import { localStorageConstants } from "../constants";
+import { ITodo, TTodoType } from "../../shared/types";
+import { localStorageConstants } from "../../shared/constants";
 
 const getLSType = (): TTodoType | null =>
   (localStorage.getItem(localStorageConstants.type) as TTodoType) ?? null;

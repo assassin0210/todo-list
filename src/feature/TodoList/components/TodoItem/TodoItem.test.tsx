@@ -3,7 +3,7 @@ import { TodoItem } from "./TodoItem";
 import {
   TodoProvider,
   useTodo,
-} from "../../../shared/todosContext/TodosContext";
+} from "../../../../entities/todosContext/TodosContext";
 
 jest.mock("../../../shared/todosContext/TodosContext", () => ({
   ...jest.requireActual("../../../shared/todosContext/TodosContext"),

@@ -1,6 +1,6 @@
 import { Button } from "antd";
 import styles from "./TodosFooter.module.scss";
-import { useTodo } from "../../../shared/todosContext/TodosContext";
+import { useTodo } from "../../../../entities/todosContext/TodosContext";
 export const TodosFooter = () => {
   const { type, changeType, todos, clearComplete } = useTodo();
 

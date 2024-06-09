@@ -2,7 +2,7 @@ import { Button, Input } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import styles from "./TodosHeader.module.scss";
 import { useState } from "react";
-import { useTodo } from "../../../shared/todosContext/TodosContext";
+import { useTodo } from "../../../../entities/todosContext/TodosContext";
 
 export const TodosHeader = () => {
   const { addTodo, toggleAllTodos } = useTodo();

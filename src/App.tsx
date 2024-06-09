@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./App.module.scss";
 import { TodoList } from "./feature/TodoList/TodoList";
-import { TodoProvider } from "./shared/todosContext/TodosContext";
+import { TodoProvider } from "./entities/todosContext/TodosContext";
 
 export const App = () => {
   return (

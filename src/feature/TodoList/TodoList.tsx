@@ -1,17 +1,12 @@
 import styles from "./TodoList.module.scss";
-import { TodosFooter } from "../../enteties/ui/TodosFooter/TodosFooter";
-import { TodosHeader } from "../../enteties/ui/TodosHeader/TodosHeader";
-import { TodoItem } from "../../enteties/ui/TodoItem/TodoItem";
-import { useTodo } from "../../shared/todosContext/TodosContext";
+import { TodosFooter } from "./components/TodosFooter/TodosFooter";
+import { TodosHeader } from "./components/TodosHeader/TodosHeader";
+import { TodoItem } from "./components/TodoItem/TodoItem";
+import { useTodo } from "../../entities/todosContext/TodosContext";
 import { motion, AnimatePresence } from "framer-motion";
-import { EmptyList } from "../../enteties/ui/EmptyList/EmptyList";
-import { TTodoType } from "../../types";
-
-const todoVariants = {
-  hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: 100 },
-};
+import { EmptyList } from "./components/EmptyList/EmptyList";
+import { TTodoType } from "../../shared/types";
+import { todoVariants } from "./constants";
 
 export const TodoList = () => {
   const { todos, setCompleteTodo, filteredTodos, type } = useTodo();
