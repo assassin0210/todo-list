@@ -5,18 +5,23 @@ import { useState } from "react";
 import { useTodo } from "../../../shared/todosContext/TodosContext";
 
 export const TodosHeader = () => {
-  const { addTodo, todos } = useTodo();
+  const { addTodo, toggleAllTodos } = useTodo();
 
   const [value, setValue] = useState("");
 
   return (
-    <article className={styles.root}>
-      <Button size="middle" type="text" icon={<DownOutlined />} />
+    <header className={styles.root}>
+      <Button
+        onClick={toggleAllTodos}
+        size="middle"
+        type="text"
+        icon={<DownOutlined />}
+      />
       <Input
         value={value}
         onKeyDown={(e) => {
-          if (e.key === "Enter") {
-            addTodo({ type: "active", id: todos.length, label: value });
+          if (e.key === "Enter" && value.length) {
+            addTodo({ type: "active", id: Date.now(), label: value });
             setValue("");
           }
         }}
@@ -24,6 +29,6 @@ export const TodosHeader = () => {
         size="middle"
         placeholder="What need to be one?"
       />
-    </article>
+    </header>
   );
 };

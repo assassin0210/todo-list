@@ -1,11 +1,11 @@
 import React from "react";
-import "./App.css";
+import styles from "./App.module.scss";
 import { TodoList } from "./feature/TodoList/TodoList";
 import { TodoProvider } from "./shared/todosContext/TodosContext";
 
 export const App = () => {
   return (
-    <section>
+    <section className={styles.root}>
       <TodoProvider>
         <TodoList />
       </TodoProvider>

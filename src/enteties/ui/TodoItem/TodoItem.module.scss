@@ -3,10 +3,17 @@
   align-items: center;
   padding: 6px 12px;
   padding-left: 20px;
+  overflow: hidden;
+  width: 100%;
   gap: 8px;
   border-bottom: 1px solid lightgray;
+}
 
-  p {
-    margin: 0;
-  }
+.radio {
+  overflow: hidden;
+  white-space: pre;
+}
+
+.complete {
+  text-decoration: line-through;
 }
